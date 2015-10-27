@@ -4,8 +4,11 @@
 //Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
-
-
+var me ={
+  name: "Michael Hall",
+  age: 16,
+};
+console.log(me.name);
 
 
 //NEXT PROBLEM
@@ -16,15 +19,24 @@
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
 
   //Code here
-
+var favoriteThings={
+  band: "Mine",
+  food: "Ham",
+  person: "Me",
+  book: "Narnia",
+  movie: "Hot Rod",
+  holiday: "Christmas"
+};
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
-
+favoriteThings.car = "Any";
+favoriteThings.brand = "Google";
   //Code here
 
 
 //Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
-
+favoriteThings.food = "Lettuce";
+favoriteThings.book = "Not 50 Shades of Gray";
   //Code here
 
 
@@ -53,9 +65,13 @@ Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
   //Code here
-
-
-
+var backPack = {
+  
+};
+var item = "firstPocket";
+backPack[item] = "ChapStick";
+backPack.color = "Fusha";
+console.log(backPack);
 
 //NEXT PROBLEM
 
@@ -69,8 +85,19 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
+var me = {
+  name: "Serena",
+  age: "36",
+  height: "5 foot 7 inches",
+  gender: "Female",
+  married: "No",
+  eyeColor: "Blue",
+  hairColor: "Brown"
+};
 
-
+for(var l in me){
+  console.log(me[l]);
+}
 
 
 //NEXT PROBLEM
@@ -85,8 +112,16 @@ Instead, console.log your whole backPack object and then check out the console. 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
-
+var album ={
+  a: "3:24",
+  b: "5:23",
+  c: "1:01",
+  d: "2:56",
+  z: "3:13"
+};
+for(var name in album){
+  console.log(name);
+}
 
 
 //NEXT PROBLEM
@@ -117,7 +152,7 @@ var user = {
     birthday: undefined,
     username: 'tylermcginnis33',
     age: 0
-}
+};
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
