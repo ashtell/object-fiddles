@@ -136,8 +136,18 @@ for(var name in album){
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
-
-
+var states = {
+  Utah: 2300000,
+  NewYork: 50000000,
+  BussketState: 3,
+  Serenaville: 45,
+  MikeyVille: 46
+};
+for(var i in states){
+  if(states[i] > 30000){
+    console.log(i + ": " + states[i]);
+  }
+}
 
 
 //NEXT PROBLEM
@@ -155,21 +165,24 @@ var user = {
 };
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
-
+for(var i in user){
+  if (!user[i]){
+    delete user[i];
+  }
+}
   //Code Here
-
+console.log(user);
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
-
-
-
-
+user.name= "Mikey";
+user.pwHash= "Idispisethis";
+user.username="Ashtell";
 //NEXT PROBLEM
 
 
 
-
+console.log(user);
 var user = {
         name: 'Tyler McGinnis',
         age: 24,
@@ -183,11 +196,12 @@ var user = {
 };
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
-
+user.name = "Tyler S. McGinnis";
+user.email= "tyler.mcginnis@devmounta.in";
   //Code Here
-
+console.log(user);
 //Now call the sayName method that's on the user object which will alert the users email
-
+user.sayName();
   //Code Here
 
 
@@ -199,7 +213,7 @@ var user = {
 
 
 //Create an empty object called methodCollection.
-
+var methodCollection ={};
   //Code Here
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
